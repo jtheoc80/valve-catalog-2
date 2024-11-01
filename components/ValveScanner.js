@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
 import { Camera, Upload, X, Check, Loader } from 'lucide-react';
+import React, { useState, useRef } from 'react';
 
 const ValveScanner = ({ onClose }) => {
   const [isCameraActive, setIsCameraActive] = useState(false);
