@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Search, Camera, Clock } from 'lucide-react';
+import ValveScanner from '../components/ValveScanner';
 
 export default function Home() {
   const [isScanning, setIsScanning] = useState(false);
@@ -74,7 +75,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-
+{isScanning && (
+  <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+    <div className="w-full max-w-md">
+      <ValveScanner onClose={() => setIsScanning(false)} />
+    </div>
+  </div>
+)}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 -mt-6">
         {categories.map((category, index) => (
           <div key={index} className="mb-8">
