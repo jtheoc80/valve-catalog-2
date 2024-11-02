@@ -93,7 +93,7 @@ export default async function handler(req, res) {
       error: error.message 
     });
   }
-}
+
 import React, { useState, useRef } from 'react';
 import { Camera, Upload, X, Check, Loader, Ruler, Box, BookOpen, Hash } from 'lucide-react';
 
